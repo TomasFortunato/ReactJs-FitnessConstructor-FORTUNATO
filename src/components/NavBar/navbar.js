@@ -1,6 +1,8 @@
 import Button from '@mui/material/Button';
-
-function NavBar(){
+import CartWidget from '../Carrito/CartWidget';
+function NavBar(props) {
+    console.log(props)
+    
     return(
         <header className='main-header'>
         <div className='container-logo'>
@@ -14,6 +16,7 @@ function NavBar(){
           <li><Button variant='contained'>Productos</Button></li>
           <li><Button variant='contained'>Nosotros</Button></li>
           <li><Button variant='contained'>Contactos</Button></li>
+          <CartWidget/>
         </ul>
       </header>
     )
