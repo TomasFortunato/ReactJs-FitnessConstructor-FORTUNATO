@@ -4,7 +4,8 @@ const listProducts = ({children}) =>{
     let dataProduct = {
         title:'Cuota Simple',
         dias:'1 a 3',
-        precio: 4500
+        precio: 4500 ,
+        stock: 1 
     }
 
     return(
