@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&family=Montserrat:wght@100;300;500&display=swap');
+p,a,h1,h2,h3,h4,span {
+  font-family: 'Montserrat', sans-serif;
+}
 
 header.main-header{
   width: 100%;
@@ -7,6 +11,7 @@ header.main-header{
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  background-color: darkslategray;
 }
 
 ul.navbar{
@@ -16,6 +21,16 @@ ul.navbar{
 
 ul.navbar li{
   margin-right: 15px;
+}
+
+header.main-header li button {
+  background: none;
+  font-family: 'Montserrat';
+  transition: all 0.2s ease;
+
+}
+header.main-header li button:hover {
+  background: none;
 }
 
 .container-logo{
@@ -29,13 +44,24 @@ ul.navbar li{
 .card-item{
   float: left;
   border: 1px solid #ababab ;
-  width: 250px;
-  margin: 20px 0px 0px 20px;
+  width: calc(33.333% - 14px);
+  margin: 20px 0px 0px 100px;
   box-shadow: 1px 1px 5px #0000002b ;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
+  overflow: hidden;
 
+}
+
+.container-general {
+  width: 1200px;
+}
+
+.container-cards {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .carrito{

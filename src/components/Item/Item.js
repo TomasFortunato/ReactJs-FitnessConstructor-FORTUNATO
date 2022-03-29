@@ -1,20 +1,6 @@
-import React,{ useState} from 'react'
-import ItemCount from '../ItemCount/ItemCount'
-import './cards.css'
-export default function Card({data}) {
+export default function Item({data}) {
     const {title, dias, precio, image}= data
-    const [ count, setCount ] = useState(0)
-    const [ countTest, setCountTest ] = useState (0)
 
-    console.log("estado contador: ", count)
-
-    const addStock = () => {
-        setCount(count + 1)
-    }
-
-    const removeStock = () => {
-        setCountTest(countTest - 1)
-    }
     return(
         <div className="card-item">
             <img src={`./${image}`} alt={image}/>

@@ -1,7 +1,7 @@
 
 import './App.css';
 import NavBar from './components/NavBar/navbar';
-import ListProducts from './components/ListProducts/listProducts';
+import ItemList from './components/ItemList/itemList';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <NavBar />
       <ItemListContainer title="Tipo de Coutas GYM"/>
-      <ListProducts />      
+      <ItemList />      
     </div>
   );
 }

@@ -7,7 +7,7 @@ function NavBar(props) {
         <header className='main-header'>
         <div className='container-logo'>
         <img 
-        src= "logo192.png"
+        src= "LOGO-C.png"
         className="App-logo" 
         />
         </div>
