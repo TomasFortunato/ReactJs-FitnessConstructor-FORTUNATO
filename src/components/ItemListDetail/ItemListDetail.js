@@ -23,15 +23,15 @@ const ItemListDetail = ({children}) =>{
     
     const [products, setProducts] = useState([])
 
-    const getProducts = () => {
-        return new Promise((resolve, reject) => {
-            return resolve(mockProductos)
+    const getProducts = new Promise ((resolve, reject) => {
+            setTimeout( () =>{
+                resolve(mockProductos)
+            }, 2000);
     })
-}
+
    useEffect( () => {
-       getProducts().then( (productos) => {
+       getProducts.then( (productos) => {
            setProducts(productos)
-           setTimeout(()=> getProducts(), 2000);
        })
    }, [])
     
