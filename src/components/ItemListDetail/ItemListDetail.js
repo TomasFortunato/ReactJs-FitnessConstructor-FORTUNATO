@@ -26,7 +26,7 @@ const ItemListDetail = ({children}) =>{
     const getProducts = new Promise ((resolve, reject) => {
             setTimeout( () =>{
                 resolve(mockProductos)
-            }, 2000);
+            }, 1000);
     })
 
    useEffect( () => {
