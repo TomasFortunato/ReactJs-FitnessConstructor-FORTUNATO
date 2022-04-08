@@ -17,9 +17,21 @@ const onRemove = () =>{
 
     return(
         <>
+        <div>
         <button onClick={onRemove}> - </button>
             <p>{count}</p>
         <button onClick={onAdd}>+</button>
+        </div>
+        {
+            count > 0 ?
+            <div onClick={() => onAdd()}>
+                Añadir al Carrito
+            </div>
+            :
+            <div>
+                Añadir al Carrito
+            </div>
+        }
         </>
     )
 }

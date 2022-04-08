@@ -23,6 +23,7 @@ function App() {
           <Route path="/clases" element={<ClasesList />}/>
           <Route path="/" element={<ItemList />}/>
           <Route path="*" element={<NotFound/>}/>
+          <Route path="/staff" element={<ItemListDetail/>}/>
         </Routes>
       </BrowserRouter>
     </div>

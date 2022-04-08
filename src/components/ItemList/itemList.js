@@ -1,6 +1,7 @@
 import  React, {useState, useEffect} from 'react'
 import Card from '../Cards/cards'
 import Item from '../Item/Item'
+import ItemListDetail from '../ItemListDetail/ItemListDetail'
 
 const ItemList = ({children}) =>{
     const mockProductos = [{
@@ -47,5 +48,6 @@ const ItemList = ({children}) =>{
         </div>
     )
 }
+
 
 export default ItemList;
