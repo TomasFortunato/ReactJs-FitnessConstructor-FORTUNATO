@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
-const ItemCount = ({stock}) => {
+const ItemCount = ({item, stock, initial, addItem}) => {
     const [count, setCount] = useState(0)
     
 
-    const onAdd = () =>{
+    const addItem = () =>{
         if(count < stock){
             setCount(count +1)
     }
@@ -20,13 +20,13 @@ const onRemove = () =>{
         <div>
         <button onClick={onRemove}> - </button>
             <p>{count}</p>
-        <button onClick={onAdd}>+</button>
+        <button onClick={addItem}>+</button>
         </div>
         {
             count > 0 ?
-            <div onClick={() => onAdd()}>
+            <button onClick={() => addItem(item, count)}>
                 Añadir al Carrito
-            </div>
+            </button>
             :
             <div>
                 Añadir al Carrito

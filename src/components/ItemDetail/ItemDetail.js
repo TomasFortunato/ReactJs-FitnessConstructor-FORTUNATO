@@ -1,6 +1,8 @@
-import React, { useState } from "react"
+import React, { createContext, useState } from "react"
 import { Link } from "react-router-dom"
 import ItemCount from "../ItemCount/ItemCount"
+import { useContext } from "react"
+import  {CartContext}  from "../context/useContext"
 
 export default function ItemDetail({data}) {
     const {title, dias, precio, image, detalle}= data
@@ -9,6 +11,7 @@ export default function ItemDetail({data}) {
     const onAdd = () => {
         setAdd(!add)
     }
+    const {addItem} = useContext(CartContext)
 
     return(
         <div className="card-item">
@@ -22,14 +25,14 @@ export default function ItemDetail({data}) {
                 <button>Suscribirse</button>
             </div>
             <div>
-                {
+                {       
                     add ? 
-                        <div>añadido!</div>
+                        <div><Link to="/cart">Finalizar Compra</Link></div>
                         :
-                        <ItemCount stock={1} initial={0} onAdd={onAdd} />
+                        <ItemCount item={item} stock={1} initial={0} addItem={addItem}/>
                 }
             </div>
-            <Link to="/cart">Finalizar Compra</Link>
+            
         </div>
     )
 }
